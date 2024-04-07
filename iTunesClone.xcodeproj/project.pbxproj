@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		2E1BEE2E2BC2CBCB00F38501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1BEE2D2BC2CBCB00F38501 /* AppDelegate.swift */; };
 		2E1BEE302BC2CBCB00F38501 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1BEE2F2BC2CBCB00F38501 /* SceneDelegate.swift */; };
-		2E1BEE322BC2CBCB00F38501 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1BEE312BC2CBCB00F38501 /* ViewController.swift */; };
-		2E1BEE352BC2CBCB00F38501 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2E1BEE342BC2CBCB00F38501 /* Base */; };
 		2E1BEE372BC2CBCC00F38501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1BEE362BC2CBCC00F38501 /* Assets.xcassets */; };
 		2E1BEE3A2BC2CBCC00F38501 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2E1BEE392BC2CBCC00F38501 /* Base */; };
+		2E1BEE4C2BC2CE2100F38501 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1BEE4B2BC2CE2100F38501 /* SearchViewController.swift */; };
+		2E1BEE4E2BC2D02300F38501 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1BEE4D2BC2D02300F38501 /* SearchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E1BEE2A2BC2CBCB00F38501 /* iTunesClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1BEE2D2BC2CBCB00F38501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E1BEE2F2BC2CBCB00F38501 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E1BEE312BC2CBCB00F38501 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2E1BEE342BC2CBCB00F38501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E1BEE362BC2CBCC00F38501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E1BEE392BC2CBCC00F38501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E1BEE3B2BC2CBCC00F38501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E1BEE4B2BC2CE2100F38501 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2E1BEE4D2BC2D02300F38501 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,95 @@
 		2E1BEE2C2BC2CBCB00F38501 /* iTunesClone */ = {
 			isa = PBXGroup;
 			children = (
-				2E1BEE2D2BC2CBCB00F38501 /* AppDelegate.swift */,
-				2E1BEE2F2BC2CBCB00F38501 /* SceneDelegate.swift */,
-				2E1BEE312BC2CBCB00F38501 /* ViewController.swift */,
-				2E1BEE332BC2CBCB00F38501 /* Main.storyboard */,
-				2E1BEE362BC2CBCC00F38501 /* Assets.xcassets */,
-				2E1BEE382BC2CBCC00F38501 /* LaunchScreen.storyboard */,
-				2E1BEE3B2BC2CBCC00F38501 /* Info.plist */,
+				2E1BEE412BC2CC3600F38501 /* App */,
+				2E1BEE422BC2CC3B00F38501 /* Assets */,
+				2E1BEE432BC2CC4200F38501 /* Domain */,
+				2E1BEE442BC2CC5B00F38501 /* Pages */,
 			);
 			path = iTunesClone;
+			sourceTree = "<group>";
+		};
+		2E1BEE412BC2CC3600F38501 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE2F2BC2CBCB00F38501 /* SceneDelegate.swift */,
+				2E1BEE2D2BC2CBCB00F38501 /* AppDelegate.swift */,
+				2E1BEE3B2BC2CBCC00F38501 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2E1BEE422BC2CC3B00F38501 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE362BC2CBCC00F38501 /* Assets.xcassets */,
+				2E1BEE382BC2CBCC00F38501 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2E1BEE432BC2CC4200F38501 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE472BC2CCA800F38501 /* Service */,
+				2E1BEE462BC2CCA300F38501 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2E1BEE442BC2CC5B00F38501 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE4A2BC2CDF200F38501 /* ResultDetail */,
+				2E1BEE492BC2CDED00F38501 /* SearchResult */,
+				2E1BEE482BC2CDE600F38501 /* Search */,
+				2E1BEE452BC2CC6A00F38501 /* Utils */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		2E1BEE452BC2CC6A00F38501 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2E1BEE462BC2CCA300F38501 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE4D2BC2D02300F38501 /* SearchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E1BEE472BC2CCA800F38501 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2E1BEE482BC2CDE600F38501 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE4B2BC2CE2100F38501 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2E1BEE492BC2CDED00F38501 /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		2E1BEE4A2BC2CDF200F38501 /* ResultDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ResultDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +207,6 @@
 			files = (
 				2E1BEE372BC2CBCC00F38501 /* Assets.xcassets in Resources */,
 				2E1BEE3A2BC2CBCC00F38501 /* Base in Resources */,
-				2E1BEE352BC2CBCB00F38501 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +217,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1BEE322BC2CBCB00F38501 /* ViewController.swift in Sources */,
+				2E1BEE4C2BC2CE2100F38501 /* SearchViewController.swift in Sources */,
 				2E1BEE2E2BC2CBCB00F38501 /* AppDelegate.swift in Sources */,
 				2E1BEE302BC2CBCB00F38501 /* SceneDelegate.swift in Sources */,
+				2E1BEE4E2BC2D02300F38501 /* SearchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2E1BEE332BC2CBCB00F38501 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E1BEE342BC2CBCB00F38501 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2E1BEE382BC2CBCC00F38501 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,10 +366,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q37X3LG46V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iTunesClone/Info.plist;
+				INFOPLIST_FILE = iTunesClone/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,10 +394,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q37X3LG46V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iTunesClone/Info.plist;
+				INFOPLIST_FILE = iTunesClone/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
