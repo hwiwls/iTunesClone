@@ -18,6 +18,9 @@
 		2E1BEE562BC2D15500F38501 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1BEE552BC2D15500F38501 /* RxRelay */; };
 		2E1BEE582BC2D15600F38501 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1BEE572BC2D15500F38501 /* RxSwift */; };
 		2E1BEE5B2BC2D16400F38501 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1BEE5A2BC2D16400F38501 /* SnapKit */; };
+		2E1BEE5D2BC2D1FD00F38501 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1BEE5C2BC2D1FD00F38501 /* SearchViewModel.swift */; };
+		2E1BEE622BC2D2A600F38501 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1BEE612BC2D2A600F38501 /* SearchTableViewCell.swift */; };
+		2E1BEE642BC2D3AC00F38501 /* SeachAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1BEE632BC2D3AC00F38501 /* SeachAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		2E1BEE3B2BC2CBCC00F38501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1BEE4B2BC2CE2100F38501 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2E1BEE4D2BC2D02300F38501 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		2E1BEE5C2BC2D1FD00F38501 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2E1BEE612BC2D2A600F38501 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		2E1BEE632BC2D3AC00F38501 /* SeachAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				2E1BEE4A2BC2CDF200F38501 /* ResultDetail */,
-				2E1BEE492BC2CDED00F38501 /* SearchResult */,
 				2E1BEE482BC2CDE600F38501 /* Search */,
+				2E1BEE602BC2D22700F38501 /* TableViewCell */,
 				2E1BEE452BC2CC6A00F38501 /* Utils */,
 			);
 			path = Pages;
@@ -131,6 +137,7 @@
 		2E1BEE472BC2CCA800F38501 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2E1BEE632BC2D3AC00F38501 /* SeachAPIService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -138,16 +145,10 @@
 		2E1BEE482BC2CDE600F38501 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				2E1BEE4B2BC2CE2100F38501 /* SearchViewController.swift */,
+				2E1BEE5F2BC2D22300F38501 /* ViewModel */,
+				2E1BEE5E2BC2D21E00F38501 /* ViewController */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		2E1BEE492BC2CDED00F38501 /* SearchResult */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchResult;
 			sourceTree = "<group>";
 		};
 		2E1BEE4A2BC2CDF200F38501 /* ResultDetail */ = {
@@ -155,6 +156,30 @@
 			children = (
 			);
 			path = ResultDetail;
+			sourceTree = "<group>";
+		};
+		2E1BEE5E2BC2D21E00F38501 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE4B2BC2CE2100F38501 /* SearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2E1BEE5F2BC2D22300F38501 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE5C2BC2D1FD00F38501 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2E1BEE602BC2D22700F38501 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BEE612BC2D2A600F38501 /* SearchTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1BEE4C2BC2CE2100F38501 /* SearchViewController.swift in Sources */,
+				2E1BEE5D2BC2D1FD00F38501 /* SearchViewModel.swift in Sources */,
+				2E1BEE642BC2D3AC00F38501 /* SeachAPIService.swift in Sources */,
 				2E1BEE2E2BC2CBCB00F38501 /* AppDelegate.swift in Sources */,
+				2E1BEE622BC2D2A600F38501 /* SearchTableViewCell.swift in Sources */,
 				2E1BEE302BC2CBCB00F38501 /* SceneDelegate.swift in Sources */,
 				2E1BEE4E2BC2D02300F38501 /* SearchModel.swift in Sources */,
 			);

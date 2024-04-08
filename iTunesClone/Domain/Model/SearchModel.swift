@@ -16,4 +16,5 @@ struct SearchModel: Codable {
 struct SearchResult: Codable {
     let artistName: String
     let trackName: String
+//    let artworkUrl100: String
 }
