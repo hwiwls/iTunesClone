@@ -38,18 +38,40 @@ class SearchViewModel {
 //            .bind(to: searchResults)
 //            .disposed(by: disposeBag)
         
+//        input.searchButtonTap
+//            .withLatestFrom(input.searchText)
+//            .flatMapLatest { searchTerm -> Observable<[SearchResult]> in
+//                AlamofireSearchAPIService.fetchSearchResultWithAlamofire(term: searchTerm)
+//                    .map { $0.results }
+//                    .catch { error -> Observable<[SearchResult]> in
+//                        errors.onNext(error)
+//                        return Observable.just([])
+//                    }
+//            }
+//            .bind(to: searchResults)
+//            .disposed(by: disposeBag)
+//
+        
         input.searchButtonTap
             .withLatestFrom(input.searchText)
             .flatMapLatest { searchTerm -> Observable<[SearchResult]> in
-                AlamofireSearchAPIService.fetchSearchResultWithAlamofire(term: searchTerm)
-                    .map { $0.results }
-                    .catch { error -> Observable<[SearchResult]> in
-                        errors.onNext(error)
-                        return Observable.just([])
+                AlamofireSearchAPIService.fetchSearchResultWithAlamofireSingle(term: searchTerm)
+                    .asObservable()
+                    .flatMap { result -> Observable<[SearchResult]> in
+                        switch result {
+                        case .success(let searchModel):
+                            return .just(searchModel.results)
+                        case .failure(let error):
+                            errors.onNext(error)
+                            return .just([])
+                        }
                     }
             }
             .bind(to: searchResults)
             .disposed(by: disposeBag)
+
+        
+        
         
         return Output(searchResults: searchResults, errors: errors)
     }
